@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
-import 'tabs/matches_tab.dart';
-import 'tabs/tournaments_tab.dart';
-import 'tabs/favorites_tab.dart';
+import 'tabs/accueil_tab.dart';
+import 'tabs/mes_matchs_tab.dart';
+import 'tabs/profil_tab.dart';
 
 class MainNavigationScreen extends StatefulWidget {
   final int initialIndex;
@@ -14,9 +14,9 @@ class MainNavigationScreen extends StatefulWidget {
 class _MainNavigationScreenState extends State<MainNavigationScreen> {
   late int _currentIndex;
   final List<Widget> _tabs = const [
-    MatchesTab(),
-    TournamentsTab(),
-    FavoritesTab(),
+    AccueilTab(),
+    MesMatchsTab(),
+    ProfilTab(),
   ];
 
   @override
@@ -46,9 +46,9 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
           type: BottomNavigationBarType.fixed,
           elevation: 0,
           items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.sports_soccer_rounded), label: 'Matchs'),
-            BottomNavigationBarItem(icon: Icon(Icons.leaderboard_rounded), label: 'Classement'),
-            BottomNavigationBarItem(icon: Icon(Icons.star_rounded), label: 'Favoris'),
+            BottomNavigationBarItem(icon: Icon(Icons.home_rounded), label: 'Accueil'),
+            BottomNavigationBarItem(icon: Icon(Icons.bookmark_rounded), label: 'Mes matchs'),
+            BottomNavigationBarItem(icon: Icon(Icons.person_rounded), label: 'Profil'),
           ],
         ),
       ),
